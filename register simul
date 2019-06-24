@@ -1,0 +1,23 @@
+// May not correct. Just used for simulation of psuedo code
+
+rsp + 40: width
+rsp + 32: height
+rsp + 24: original gap
+rsp + 16: pushed_gap
+rsp + 8: imgptr
+rsp + 0: new_start
+r8: computed_width
+rcx = posX
+rsi = gap_inc
+rdx = j
+rdi: 테스트
+rax: tmp_start
+
+# r14 = 0xff.
+# r13 = 테스트
+# r11 = 테스트
+# r10 = 0x00.
+# r9 = pushed_gap
+# rbp = 테스트
+# rbx = limit = (posX + width*3) - j;
+# r12 = width*3
