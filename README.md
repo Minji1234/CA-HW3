@@ -1,8 +1,8 @@
 # CA-HW3
 
-Repository of Computer Architecture HW3
+Private Repository for Computer Architecture HW3
 
-Do not copy
+DO NOT COPY
 
 Original File Credit
 - https://github.com/snu-csl/ca-pa4
