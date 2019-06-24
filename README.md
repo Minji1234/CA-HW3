@@ -5,5 +5,5 @@ Private Repository for Computer Architecture HW3
 DO NOT COPY
 
 Original File Credit
-- https://github.com/snu-csl/ca-pa4
+- https://github.com/snu-csl/ca-pa3
 - Refer to Original_README.md
