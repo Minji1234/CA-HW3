@@ -1,4 +1,4 @@
-// psuedo code for HW3. May not correct.
+// Psuedo code for HW3. May not correct.
 
 void bmp_diag(unsigned char *imgptr, long long width, long long height, long long gap)
 {
