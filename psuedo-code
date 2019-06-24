@@ -1,0 +1,47 @@
+// psuedo code for HW3. May not correct.
+
+void bmp_diag(unsigned char *imgptr, long long width, long long height, long long gap)
+{
+    int new_start = imgptr + (height - 1) * computed_width;
+    int computed_width = (((width*3)+3)>>2)<<2; // %r8
+    int posX = new_start; // %rcx
+    int gap_inc = 0;    // %rsi
+    int j = new_start;  // %rdx
+    while (posX >= imgptr)
+    {
+        if (gap_inc == pushed_gap)
+        {
+            gap_inc = 0;
+        }
+        j = posX + gap_inc;
+        limit = (posX + width*3) - j; // %rbx
+        while (j - (posX + width*3) < 0)
+        {
+            color(j);
+            j = j + pushed_gap; // gap에 미리 3 곱해서 push해 놓음
+        }
+        posX = posX - computed_width;
+        gap_inc = gap_inc + 3;
+    }
+    
+    posX = new_start + pushed_gap;
+    gap_inc = 0;
+    j = posX;
+    int tmp_start = new_start + width*3;
+    while (posX >= imgptr)
+    {
+        if (gap_inc == pushed_gap)
+        {
+            gap_inc = 0;
+        }
+        j = posX - gap_inc;
+        while (j - tmp_start < 0)
+        {
+            color(j);
+            j = j + pushed_gap; // gap에 미리 3 곱해서 push해 놓음
+        }
+        posX = posX - computed_width;
+        gap_inc = gap_inc + 3;
+        tmp_start = tmp_start - computed_width;
+    }
+}
